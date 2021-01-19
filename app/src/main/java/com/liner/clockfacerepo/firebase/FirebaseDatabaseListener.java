@@ -17,7 +17,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Objects;
 
-public abstract class FirebaseDatabaseValueCallback<T> {
+public abstract class FirebaseDatabaseListener<T> {
     private final Query query;
     private final List<T> values;
     private final List<String> keys;
@@ -116,15 +116,15 @@ public abstract class FirebaseDatabaseValueCallback<T> {
         }
     };
 
-    public FirebaseDatabaseValueCallback(String referencePath, int limit){
+    public FirebaseDatabaseListener(String referencePath, int limit){
         this(FirebaseDatabase.getInstance().getReference(referencePath).limitToLast(limit));
     }
 
-    public FirebaseDatabaseValueCallback(Query query){
+    public FirebaseDatabaseListener(Query query){
         this(query, new ArrayList<>(), new ArrayList<>());
     }
 
-    public FirebaseDatabaseValueCallback(Query query, List<T> values, List<String> keys){
+    public FirebaseDatabaseListener(Query query, List<T> values, List<String> keys){
         this.query = query;
         this.values = values;
         this.keys = keys;
