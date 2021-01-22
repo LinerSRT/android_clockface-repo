@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:animateLayoutChanges="true"
+    android:fitsSystemWindows="true"
+    tools:context=".activities.SplashActivity">
+
+
+    <com.liner.clockfacerepo.widgets.YSTextView
+        android:id="@+id/splashApplicationName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:spannable_text="Clockface{c=#32c732, t=++} Repo"
+        android:textColor="@color/text_color"
+        android:textSize="26sp"
+        app:font_type="Thin"
+        app:layout_constraintEnd_toEndOf="@+id/splashClockfaceLogo"
+        app:layout_constraintStart_toStartOf="@+id/splashClockfaceLogo"
+        app:layout_constraintTop_toBottomOf="@+id/splashClockfaceLogo" />
+
+
+    <ProgressBar
+        android:id="@+id/splashProgress"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:indeterminateTint="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/splashLinerLogo"
+        app:layout_constraintEnd_toEndOf="@+id/splashClockfaceLogo"
+        app:layout_constraintStart_toStartOf="@+id/splashClockfaceLogo"
+        app:layout_constraintTop_toBottomOf="@+id/splashApplicationName" />
+
+    <ImageView
+        android:id="@+id/splashClockfaceLogo"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:adjustViewBounds="true"
+        android:src="@drawable/clockface_spash_watchfaces"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <ImageView
+        android:id="@+id/splashLinerLogo"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_marginBottom="16dp"
+        android:src="@drawable/clockface_splash_liner"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

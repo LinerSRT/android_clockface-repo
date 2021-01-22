@@ -1,10 +1,10 @@
-package com.liner.clockfacerepo;
-
-import androidx.appcompat.app.AppCompatActivity;
+package com.liner.clockfacerepo.activities;
 
 import android.os.Bundle;
 
-public class MainActivity extends AppCompatActivity {
+import com.liner.clockfacerepo.R;
+
+public class MainActivity extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="YSTextView">
+        <attr name="spannable_text" format="string|reference"/>
+        <attr name="font_type">
+            <enum name="Bold" value="1" />
+            <enum name="Light" value="2" />
+            <enum name="Medium" value="3" />
+            <enum name="Regular" value="4" />
+            <enum name="RegularItalic" value="5" />
+            <enum name="Thin" value="6" />
+        </attr>
+    </declare-styleable>
+</resources>
