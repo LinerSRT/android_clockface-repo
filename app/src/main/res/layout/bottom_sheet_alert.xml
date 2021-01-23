@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@drawable/background_round_top"
+    android:paddingStart="16dp"
+    android:paddingEnd="16dp"
+    android:paddingTop="16dp"
+    android:backgroundTint="@color/background_light"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/bottom_sheet_alert_icon"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:adjustViewBounds="true"
+        android:src="@drawable/warning_icon"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.liner.clockfacerepo.widgets.YSTextView
+        android:id="@+id/bottom_sheet_alert_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        tools:text="Warning its really dangerous!"
+        android:textSize="@dimen/text_size"
+        android:textColor="@color/text_color"
+        app:font_type="Bold"
+        app:layout_constraintBottom_toBottomOf="@+id/bottom_sheet_alert_icon"
+        app:layout_constraintStart_toEndOf="@+id/bottom_sheet_alert_icon"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.liner.clockfacerepo.widgets.YSTextView
+        android:id="@+id/bottom_sheet_alert_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="32dp"
+        tools:text="This is explanation about this warning text for better user experience!"
+        android:textColor="@color/text_color_dark"
+        android:textSize="@dimen/text_size_secondary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/bottom_sheet_alert_title"
+        app:layout_constraintTop_toBottomOf="@+id/bottom_sheet_alert_title" />
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/bottom_sheet_alert_button"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="8dp"
+        tools:text="Okay"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bottom_sheet_alert_text" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
