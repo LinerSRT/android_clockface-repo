@@ -1,9 +1,12 @@
 package com.liner.clockfacerepo.activities;
 
+import android.animation.LayoutTransition;
 import android.os.Handler;
 import android.util.SparseArray;
 import android.view.View;
+import android.view.ViewGroup;
 
+import androidx.annotation.ColorRes;
 import androidx.annotation.IdRes;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
@@ -17,7 +20,7 @@ public abstract class BaseActivity extends AppCompatActivity {
     @Override
     protected void onStart() {
         super.onStart();
-        Views.setStatusBarBackground(this, R.color.background);
+        Views.setStatusBarBackground(this, getStatusBarColor());
         getWindow().setNavigationBarColor(ContextCompat.getColor(this, R.color.background));
     }
 
@@ -32,11 +35,11 @@ public abstract class BaseActivity extends AppCompatActivity {
         return (V) view;
     }
 
-    public void onUI(Runnable runnable){
+    public void onUI(Runnable runnable) {
         onUI(runnable, 0);
     }
 
-    public void onUI(Runnable runnable, int delay){
+    public void onUI(Runnable runnable, int delay) {
         new Handler(getMainLooper()).postDelayed(runnable, delay);
     }
 
@@ -52,4 +55,7 @@ public abstract class BaseActivity extends AppCompatActivity {
     public void showNavigationBar() {
         getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_VISIBLE);
     }
+
+    @ColorRes
+    public abstract int getStatusBarColor();
 }
